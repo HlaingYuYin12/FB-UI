@@ -1,0 +1,938 @@
+
+
+:root{
+    --primary :#4897ff;
+    --dark :#18191a;
+    --sime-dark : #242526;
+    --soft-dark : #3a3b3c;
+    --danger : #f02849;
+    --success : #44b960;
+    --warning :#dda728;
+    --text : #b7b9bd;
+    --text-light : #ffffff;
+}
+*{
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-light);
+}
+
+
+.body{
+    background-color: var(--dark);
+}
+.nav{
+    background-color: var(--sime-dark);
+    /* height: 60px; */
+    display: flex;
+}
+
+
+/* left */
+.left{
+    width: 25%;
+}
+.left-box{
+    display: flex;
+    padding: 10px;
+}
+.logo{
+    width: 40px;
+    margin-right: 10px;
+}
+.search-box{
+    background-color: var(--soft-dark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.search-box .fa-search{
+    margin-right: 10px;
+}
+.search-input{
+    color: var(--text);
+    background-color: var(--soft-dark);
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+
+/* center */
+.center{
+    width: 50%;
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+}
+.center-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: 0 5px;
+    border-top : var(--sime-dark);
+    border-bottom : 3px solid var(--sime-dark);
+    padding: 10px;
+    position: relative;
+    transition: 0.5s;
+}
+.center-link:hover{
+    background-color: var(--soft-dark);
+    border-radius: 20px;
+}
+.center-link.active{
+    border-bottom-color:  var(--primary);
+}
+.center-link.active:hover{
+    background-color: var(--sime-dark);
+    border-radius: 0px;
+}
+.center-link.active .center-icon{
+    color: var(--primary) !important;
+}
+
+.center-link .notification{
+    background-color: var(--danger);
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+
+/* right */
+.right{
+    width: 25%;
+}
+.right-box{
+    display: flex;
+    justify-content: flex-end;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+.profile:hover{
+    background-color: var(--soft-dark);
+    
+}
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.profile-text{
+    color: var(--text);
+    font-weight: bolder;
+}
+.right-notification-box{
+    display: flex;
+}
+.right-notification{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-dark);
+    border-radius: 50%;
+    margin:10px 5px;
+}
+
+
+
+/* fb-body */
+.fb-body{
+    display: flex;    
+}
+.left-aside{
+    width: 25%;
+}
+
+.news-feed{
+    width: 50%;
+}
+.my-day-list{
+    margin-top: 20px;
+    display: flex;
+    /* overflow-y: scroll; */
+    /* position: absolute; */
+    width: 100%;
+    justify-content: space-between;
+}
+.my-day-item{
+    width: 110px;
+}
+.my-day{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background-size: 150%;
+    background-position: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.my-day-owner-gg{
+    width: 40px;
+    height: 40px;
+    background: var(--sime-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-day-owner{
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-day-owner-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+}
+.my-day-text{
+    bottom: 10px;
+    color: var(--text-light);
+    font-size: 15px;
+}
+.my-day-image{
+    width: 100%;
+}
+.scroll-my-day{
+    height: 50px;
+    width: 50px;
+    background-color: var(--sime-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 380px;
+    top: 155px;
+    z-index: 2;
+    /* transform: translate(650px, 130px); */
+}
+.add-post{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: var(--sime-dark);
+    padding: 10px 20px;
+}
+
+.add-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-text-profile{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.add-text-box{
+    background-color: var(--soft-dark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.divider{
+    /* border: 1px solid var(--soft-dark); */
+    margin: 10px 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--soft-dark);
+}
+.add-file{
+    display: flex;
+    justify-content: space-between;
+}
+.add-file div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.add-file div:hover{
+    background-color: var(--soft-dark);
+}
+.add-file .video i{
+    color: var(--danger);
+}
+.add-file .photo i{
+    color: var(--success);
+}
+.add-file .emoji i{
+    color: var(--warning);
+
+}
+.post-list{
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: var(--sime-dark);
+        padding: 10px 20px;
+}
+.post-all{
+    margin: 10px;
+}
+.post-left{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.post-center{
+    width: 50%;
+}
+.post-right{
+    width: 20%;
+    
+}
+.dot{
+    position: absolute;
+    left: 950px;
+}
+
+.post-photo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.post-name{
+    font-size: 16px;
+    margin-top: 7px;
+    color: var(--text-light);
+}
+.fa-heart{
+    color: var(--danger);
+}
+.caption{
+    color: var(--text-light);
+}
+.breakfast{
+    width: 100%;
+    height: 360px;
+}
+.emote{
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 13px;
+}
+.like{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(19, 73, 248);
+    color: white;
+    margin-right: 0;
+    z-index: 2;
+
+}
+.liked{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--danger);
+    margin-left: -5px;
+    color: white;
+}
+.add-text-profiles{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.add-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-test-box{
+    background-color: var(--soft-dark);
+    border-radius: 80px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.fa-camera{
+    margin-right: 15px;
+}
+.fa-image{
+    margin-right: 15px;
+}
+.fa-github{
+    margin-right: 15px;
+}
+.add-file{
+    display: flex;
+    justify-content: space-between;
+}
+.add-file div:hover{
+    background-color: var(--soft-dark);
+}
+.add-file .videos i{
+    color: var(--primary);
+}
+
+.dividers{
+    margin: 2px 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--soft-dark);
+    margin-bottom: 5px;
+}
+
+/* chatbox */
+.chat-box{
+    width: 25%;
+    margin-left: 60px;
+
+}
+.sp{
+    width: 100%;
+    padding: 20px;
+    
+}
+.poe-img{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+.poe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: whitesmoke;
+}
+.rig{
+    position: absolute;
+    left: 1300px;
+}
+.na{
+    padding-bottom: 20px;
+
+}
+.me{
+    position: absolute;
+    left: 1230px;
+}
+.ymlogo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.page{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.msg{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.side{
+    margin-left: 10px;
+    font-size: 13px;
+}
+.gift{
+    height: 33px;
+    width: 30px;
+}
+.ma{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(78, 252, 55);
+    position: absolute;
+    top: 587px;
+    left: 1092px;
+}
+.ma1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 630px;
+    left: 1092px;
+}
+.ma2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 674px;
+    left: 1092px;
+}
+.ma3{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 718px;
+    left: 1092px;
+}
+.ma4{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 762px;
+    left: 1092px;
+}
+.ma5{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 806px;
+    left: 1092px;
+}
+.ma6{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 850px;
+    left: 1092px;
+}
+.ma7{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 894px;
+    left: 1092px;
+}
+.ma8{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 938px;
+    left: 1092px;
+}
+.ma9{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 982px;
+    left: 1092px;
+}
+.ma10{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1026px;
+    left: 1092px;
+}
+.ma11{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1070px;
+    left: 1092px;
+}
+.ma12{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1114px;
+    left: 1092px;
+}
+.ma13{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1158px;
+    left: 1092px;
+}
+.ma14{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1202px;
+    left: 1092px;
+}
+.ma15{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1246px;
+    left: 1092px;
+}
+.ma16{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1290px;
+    left: 1092px;
+}
+.ma17{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1334px;
+    left: 1092px;
+}
+.ma18{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1378px;
+    left: 1092px;
+}
+.ma19{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1422px;
+    left: 1092px;
+}
+.ma20{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1466px;
+    left: 1092px;
+}
+.ma21{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1510px;
+    left: 1092px;
+}
+.ma22{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1554px;
+    left: 1092px;
+}
+.ma23{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1598px;
+    left: 1092px;
+}
+.ma24{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1642px;
+    left: 1092px;
+}
+.ma25{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1686px;
+    left: 1092px;
+}
+.ma26{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1730px;
+    left: 1092px;
+}
+.ma27{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1774px;
+    left: 1092px;
+}
+.ma28{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1818px;
+    left: 1092px;
+}
+.ma29{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1862px;
+    left: 1092px;
+}
+.ma30{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1906px;
+    left: 1092px;
+}
+.ma31{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1950px;
+    left: 1092px;
+}
+.ma32{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 1994px;
+    left: 1092px;
+}
+.ma33{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2038px;
+    left: 1092px;
+}
+.ma34{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2082px;
+    left: 1092px;
+}
+.ma35{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2126px;
+    left: 1092px;
+}
+.ma36{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2170px;
+    left: 1092px;
+}
+.ma37{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2214px;
+    left: 1092px;
+}
+.ma38{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2258px;
+    left: 1092px;
+}
+.ma39{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2302px;
+    left: 1092px;
+}
+.ma40{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2346px;
+    left: 1092px;
+}
+.ma41{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgb(78, 252, 55);
+    position: absolute;
+    top: 2390px;
+    left: 1092px;
+}
+
+/* .left-aside */
+.spp{
+    width: 100%;
+    padding: 20px;
+}
+.covid{
+    color: rgb(238, 55, 238);
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: 10px;
+}
+.messenger{
+    margin-top: 17px;
+    margin-right: 12px;
+    width: 26px;
+    height: 26px;
+    
+}
+.mss{
+    position: absolute;
+    top: 157px;
+    left: 69px;
+}
+.live{
+    margin-top: 13px;
+    margin-right: 12px;
+    width: 26px;
+    height: 15px;
+}
+.liv{
+    position: absolute;
+    top: 199px;
+    left: 69px;
+}
+.flag{
+    margin-top: 15px;
+    color: rgb(253, 152, 19);
+    font-size: 20px;
+    margin-right: 14px;
+}
+.tv{
+    margin-top: 17px;
+    color: rgb(28, 87, 248);
+    font-size: 18px;
+    margin-right: 10px;
+}
+.see{
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--soft-dark);
+    border: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+.down{
+    position: absolute;
+    top: 323px;
+    left: 130px;
+}
+.logoo{
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+}
+.seee{
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--soft-dark);
+    border: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+.logooo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.downn{
+    position: absolute;
+    top: 762px;
+    left: 130px;
+}
+/* .col{
+    height: 100vh;
+    overflow: scroll;
+} */
